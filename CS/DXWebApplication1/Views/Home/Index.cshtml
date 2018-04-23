@@ -1,0 +1,25 @@
+@model DXWebApplication1.Controllers.UserModelDTO
+
+@using (Html.BeginForm()) {
+    @Html.DevExpress().FormLayout(fl => {
+        fl.Name = "frmLayout";
+        fl.Items.Add(m => m.NameProperty, itemSettings => { 
+            itemSettings.NestedExtensionSettings.Width = Unit.Percentage(100);
+        });
+        fl.Items.Add(item => {
+            item.Caption = "ImagesProperty";
+            item.SetNestedContent(() => {
+                Html.RenderPartial("UploadControlPartial");
+            });
+        });
+        fl.Items.Add(itemSettigns => {
+            itemSettigns.Caption = "";
+            itemSettigns.HorizontalAlign = FormLayoutHorizontalAlign.Right;
+            itemSettigns.NestedExtensionType = FormLayoutNestedExtensionItemType.Button;
+            var btnSettigns = (ButtonSettings)itemSettigns.NestedExtensionSettings;
+            btnSettigns.Name = "btnSumit";
+            btnSettigns.Text = "Submit";
+            btnSettigns.UseSubmitBehavior = true;
+        });
+    }).GetHtml();
+}

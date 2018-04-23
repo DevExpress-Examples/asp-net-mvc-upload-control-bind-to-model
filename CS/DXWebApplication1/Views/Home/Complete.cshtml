@@ -1,0 +1,19 @@
+@model DXWebApplication1.Controllers.UserModel
+
+@Html.DevExpress().FormLayout(fl => {
+    fl.Name = "frmLayout";
+    fl.Items.Add(m => m.Name);
+    if (!string.IsNullOrEmpty(Model.Avatar)) {
+        fl.Items.Add(itemSettigns => {
+            itemSettigns.Caption = "Avatar";
+            itemSettigns.NestedExtensionType = FormLayoutNestedExtensionItemType.Image;
+            var imgSettigns = (ImageEditSettings)itemSettigns.NestedExtensionSettings;
+            imgSettigns.Name = "imgAvatar";
+            imgSettigns.ImageUrl = Model.Avatar;
+            imgSettigns.Width = Unit.Pixel(200);
+            imgSettigns.Height = Unit.Pixel(200);
+        });
+    }
+}).GetHtml()
+
+@Html.ActionLink("<< Home", "Index")
