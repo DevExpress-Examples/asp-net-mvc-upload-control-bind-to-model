@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[HomeController.cs](./CS/DXWebApplication1/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/DXWebApplication1/Controllers/HomeController.vb))**
+* [Complete.cshtml](./CS/DXWebApplication1/Views/Home/Complete.cshtml)
+* [Index.cshtml](./CS/DXWebApplication1/Views/Home/Index.cshtml)
+* [UploadControlPartial.cshtml](./CS/DXWebApplication1/Views/Home/UploadControlPartial.cshtml)
+<!-- default file list end -->
 # UploadControl with Model Binding Support - Registration Form
 
 
