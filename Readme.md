@@ -8,7 +8,7 @@
 <!-- default file list end -->
 # UploadControl with Model Binding Support - Registration Form
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t185980)**
+**[[Run Online]](https://codecentral.devexpress.com/t185980/)**
 <!-- run online end -->
 
 
