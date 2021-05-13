@@ -1,0 +1,18 @@
+﻿@model T983248_MVC.Models.SavedModel
+
+@{
+    ViewBag.Title = "Complete";
+}
+
+<h2>Complete</h2>
+
+<div>
+    <h4>Result</h4>
+    @Html.DisplayNameFor(m=>m.UserName):
+    @Html.DisplayFor(model => model.UserName)
+    <br/>
+    <img src="@Url.Content(Model.FileUrl)" style="width:300px;height:300px;" />
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

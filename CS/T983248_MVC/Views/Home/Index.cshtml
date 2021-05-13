@@ -1,0 +1,34 @@
+@model T983248_MVC.Models.UserModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+
+@Html.DevExpress().FormLayout(settings =>
+{
+    settings.Name = "FormLayout";
+
+    settings.Items.Add(m => m.UserName);
+
+    settings.Items.Add(m => m.Attachment, i =>
+    {
+        i.NestedExtension().UploadControl(s =>
+        {
+            s.ValidationSettings.ShowErrors = true;
+        });
+    });
+    settings.Items.Add(i =>
+    {
+        i.Name = "btnSubmit";
+        i.ShowCaption = DefaultBoolean.False;
+        i.NestedExtension().Button(s =>
+        {
+            s.Text = "Submit Invoice";
+            s.UseSubmitBehavior = true;
+        });
+    });
+}).GetHtml()
+}
