@@ -5,8 +5,23 @@
 
 # Upload Control for ASP.NET MVC -  Registration form with model binding support
 
-This example demonstrates how to bind [UploadControl] (its posted files) with a Model property. 
+This example demonstrates how to bind [UploadControl](https://docs.devexpress.com/AspNetMvc/8977/components/file-management/file-upload) (its posted files) with a `Model` property. 
 
+```csharp
+public ActionResult Index(UserModel modelDTO) {
+    string fileName = string.Empty;
+    if (ModelState.IsValid) {
+        if (modelDTO.Attachment.Length > 0 && modelDTO.Attachment[0].ContentLength > 0) {
+            fileName = string.Format("~/Content/Files/{0}", modelDTO.Attachment[0].FileName);
+            modelDTO.Attachment[0].SaveAs(Server.MapPath(fileName));
+        }
+    }
+    SavedModel model = new SavedModel();
+    model.UserName = modelDTO.UserName;
+    model.FileUrl = fileName;
+    return View("Complete", model);
+}
+```
 ## Files to Review
 
 * [HomeController.cs](./CS/T983248_MVC/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/T983248_VB/Controllers/HomeController.vb))
