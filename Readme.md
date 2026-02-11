@@ -30,7 +30,7 @@ public ActionResult Index(UserModel modelDTO) {
 * [Complete.cshtml](./CS/T983248_MVC/Views/Home/Complete.cshtml) (VB: [Complete.vbhtml](./VB/T983248_VB/Views/Home/Complete.vbhtml))
 * [Index.cshtml](./CS/T983248_MVC/Views/Home/Index.cshtml) (VB: [Index.vbhtml](./VB/T983248_VB/Views/Home/Index.vbhtml))
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-upload-control-bind-to-model&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-upload-control-bind-to-model&~~~was_helpful=no)
 
